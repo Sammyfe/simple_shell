@@ -81,7 +81,7 @@ int unsetenvFunc(config *build)
 /**
  * _isalpha - checks if c is an alphabetic character
  * @c: potential alphabetical value
- * Return: if c is a letter, returns 1. Otherwise, return 0.
+ * Return: if c is an alphabet, returns 1. Otherwise, return 0.
  */
 int _isalpha(int c)
 {

@@ -39,7 +39,7 @@ char *getErrorMessage(void)
 {
 	char *str;
 
-	switch (errno)
+	switch (error)
 	{
 		case EBADCD:
 			str = ": can't cd to ";
@@ -70,7 +70,7 @@ char *getErrorMessage(void)
 
 /**
  * countDigits - count number of digits in a number
- * @num: input number
+ * num: input number
  * Return: number of digits
  */
 unsigned int countDigits(int num)
@@ -87,7 +87,7 @@ unsigned int countDigits(int num)
 
 /**
  * itoa - converts integer to string
- * @num: input integer
+ * num: input integer
  * Return: string type of number
  */
 char *itoa(unsigned int num)
