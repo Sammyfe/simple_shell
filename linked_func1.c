@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * searchNode - searches linked list for string and
+ * linkedList - searches linked list for string and
  * returns index
  * @head: pointer to head of list
  * @str: input string
  * Return: index of node with matching string
  */
-int searchNode(linked_l *head, char *str)
+int linkedList(linked_l *head, char *str)
 {
 	register int len = 0, index = 0, i;
 	linked_l *current;
@@ -55,13 +55,13 @@ linked_l *generateLinkedList(char **array)
 }
 
 /**
- * addNodeAtIndex - add node at index with string
+ * addAtIndexString - add node at index with string
  * @head: double pointer to head
  * @index: index to add at
  * @str: string to add
  * Return: address of node added
  */
-linked_l *addNodeAtIndex(linked_l **head, int index, char *str)
+linked_l *addAtIndexString(linked_l **head, int index, char *str)
 {
 	register int i = 0;
 	linked_l *newNode, *current;
@@ -103,12 +103,12 @@ linked_l *addNodeAtIndex(linked_l **head, int index, char *str)
 }
 
 /**
- * getNodeAtIndex - returns the nth node of a listint_t linked list
+ * nthLinkedList - returns the nth node of a listint_t linked list
  * @head: pointer to head of list
  * @index: index of value to be returned
  * Return: address of node at input index
  */
-char *getNodeAtIndex(linked_l *head, unsigned int index)
+char *nthLinkedlist(linked_l *head, unsigned int index)
 {
 	register uint count = 0;
 	linked_l *current;

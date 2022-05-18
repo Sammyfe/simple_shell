@@ -27,13 +27,13 @@ void displayNewLine(void)
 }
 
 /**
- * sigintHandler - catches SIGINT signal and reset signal
- * @sigint: signal from stdint
+ * sintHandler - catches SIGINT signal and reset signal
+ * @sint: signal from stdint
  */
 void sigintHandler(int sigint)
 {
-	(void)sigint;
-	signal(SIGINT, sigintHandler);
+	(void)sint;
+	signal(SINT, sintHandler);
 	displayNewLine();
 	displayPrompt();
 	fflush(stdout);

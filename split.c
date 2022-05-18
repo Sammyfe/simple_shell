@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- * splitString - splits string into an array of strings
+ * litString - splits string into an array of strings
  * separated by spaces
  * @build: input build
  * Return: true if able to split, false if not
  */
-_Bool splitString(config *build)
+_Bool litString(config *build)
 {
 	register unsigned int i = 0;
 	char *tok, *cpy;
@@ -32,11 +32,11 @@ _Bool splitString(config *build)
 }
 
 /**
- * countWords - count number of words in a string
+ * wordCounts - counts number of words in a string
  * @str: input string
  * Return: number of words
  */
-unsigned int countWords(char *str)
+unsigned int wordCounts(char *str)
 {
 	register int words = 0;
 	_Bool wordOn = false;
@@ -56,11 +56,11 @@ unsigned int countWords(char *str)
 }
 
 /**
- * isSpace - determines if char is a space
+ * charSpace - determines if char is a space
  * @c: input char
  * Return: true or false
  */
-_Bool isSpace(char c)
+_Bool charSpace(char c)
 {
 	return (c == ' ');
 }

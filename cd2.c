@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * updateOld - updates OLDPWD to current PWD
+ * updateToCurrent - updates OLDPWD to current PWD
  * @build: input build
  * Return: index in linked list of PWD on success -
  * If PWD or OLDPWD does not exist in environ vars,
  * return -1
  */
-int updateOld(config *build)
+int updateToCurrent(config *build)
 {
 	register int pwdIndex = 0, index = 0;
 	static char old[BUFSIZE];
@@ -19,7 +19,7 @@ int updateOld(config *build)
 	{
 		return (-1);
 	}
-	current = getNodeAtIndex(build->env, pwdIndex);
+	current = getAtIndex(build->env, pwdIndex);
 	_strcat(old, current);
 	insertNullByte(old, _strlen(current) + 4);
 	free(current);

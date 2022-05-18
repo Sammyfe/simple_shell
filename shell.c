@@ -14,7 +14,7 @@ void shell(config *build)
 		if (findBuiltIns(build) == true)
 			continue;
 		checkPath(build);
-		forkAndExecute(build);
+		foxExecute(build);
 	}
 }
 
@@ -83,15 +83,15 @@ void stripComments(char *str)
 }
 
 /**
- * forkAndExecute - fork current build and execute processes
+ * foxExecute - fork current build and execute processes
  * @build: input build
  */
-void forkAndExecute(config *build)
+void foxExecute(config *build)
 {
 	int status;
 	pid_t f1 = fork();
 
-	convertLLtoArr(build);
+	convertToArr(build);
 	if (f1 == -1)
 	{
 		perror("error\n");
@@ -122,10 +122,10 @@ void forkAndExecute(config *build)
 }
 
 /**
- * convertLLtoArr - convert linked list to array
+ * convertToArr - converts linked list to array
  * @build: input build
  */
-void convertLLtoArr(config *build)
+void convertToArr(config *build)
 {
 	register int i = 0;
 	size_t count = 0;
